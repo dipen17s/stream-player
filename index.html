@@ -1,28 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <title>Stream Player</title>
-  <style>
-    body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; }
-    video { width: 90%; height: auto; }
-  </style>
-</head>
-<body>
-  <video id="video" controls autoplay></video>
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-  <script>
-    const video = document.getElementById('video');
-    const urlParams = new URLSearchParams(window.location.search);
-    const streamUrl = urlParams.get('src');
-
-    if (Hls.isSupported() && streamUrl) {
-      const hls = new Hls();
-      hls.loadSource(streamUrl);
-      hls.attachMedia(video);
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = streamUrl;
-    }
-  </script>
-</body>
-</html>
+   <html>
+   <head>
+       <title>Discord Stream Player</title>
+       <meta property="og:title" content="My Stream" />
+       <meta property="og:description" content="Watch my stream!" />
+       <!-- For Video (MP4/WebM) -->
+       <meta property="og:video" content="https://5ba44.horizon-404.biz/c3/hf277c44ee87f02531920bc08770e474cf1e7ffc5b2e564fdcc1c5fd6321d6ddad170d8772672ed4765c47f139599b2b73a73000c87040b4056a4ea6d387ae4a8507f3ed59cd1c016c5b634ea20a3f6f643df13a23839fb1e65eeb65094e71dd981ffa23d882389fb94/q4/list,b73e860dba2f0e5a0c21b342720c591da4fce2c0fdfe67.m3u8" />
+       <meta property="og:video:type" content="video/mp4" />
+       <meta property="og:video:width" content="1280" />
+       <meta property="og:video:height" content="720" />
+       <!-- For Audio (MP3/OGG) -->
+       <!-- <meta property="og:audio" content="YOUR_DIRECT_MP3_URL" /> -->
+       <!-- <meta property="og:audio:type" content="audio/mpeg" /> -->
+   </head>
+   <body>
+       <h1>Stream Player</h1>
+       <p>If Discord doesn't embed, <a href="YOUR_DIRECT_STREAM_URL">click here</a>.</p>
+   </body>
+   </html>
